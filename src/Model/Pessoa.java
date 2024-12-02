@@ -46,9 +46,5 @@ public class Pessoa {
     public void setCPF(String CPF) {
         this.CPF = CPF;
     }
-
-    @Override
-    public String toString() {
-        return "Nome: " + nome + ", Idade: " + idade + ", e-mail:" + email + "e CPF: " + CPF;
-    }
 }
+
