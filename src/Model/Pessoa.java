@@ -4,23 +4,15 @@ public class Pessoa {
     private String nome;
     private int idade;
     private String email;
-    private String CPF;
+    private String cpf;
+    private int telefone;
 
-   //Construtor
-    public Pessoa(String nome, int idade, String email, String CPF) {
+    public Pessoa(String nome, int idade, String email, int telefone, String cpf) {
         this.nome = nome;
         this.idade = idade;
         this.email = email;
-        this.CPF = CPF;
-    }
-
-    //Getters e Setters
-    public int getIdade() {
-        return idade;
-    }
-
-    public void setIdade(int idade) {
-        this.idade = idade;
+        this.telefone = telefone;
+        this.cpf = cpf;
     }
 
     public String getNome() {
@@ -31,6 +23,14 @@ public class Pessoa {
         this.nome = nome;
     }
 
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -39,12 +39,24 @@ public class Pessoa {
         this.email = email;
     }
 
-    public String getCPF() {
-        return CPF;
+    public String getCpf() {
+        return cpf;
     }
 
-    public void setCPF(String CPF) {
-        this.CPF = CPF;
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public int getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(int telefone) {
+        this.telefone = telefone;
     }
 }
+
+
+
+
 
