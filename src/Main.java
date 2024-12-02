@@ -1,9 +1,10 @@
-import View.ViewCadastro;
+import Controller.CadastroController;
+import View.CadastroView;
 
 public class Main {
     public static void main(String[] args) {
-        ViewCadastro view = new ViewCadastro();
-        ControleCadastro controller = new ControleCadastro(view);
+        CadastroView view = new CadastroView();
+        CadastroController controller = new CadastroController(view);
 
         boolean continuar = true;
         while (continuar) {

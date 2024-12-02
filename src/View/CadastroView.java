@@ -1,13 +1,11 @@
 package View;
 import Model.Medico;
 import Model.Paciente;
-
 import java.util.Scanner;
 
-public class ViewCadastro {
+public class CadastroView {
     private Scanner scanner;
-
-    public ViewCadastro() {
+    public CadastroView() {
         scanner = new Scanner(System.in);
     }
 
@@ -20,7 +18,7 @@ public class ViewCadastro {
         return scanner.nextLine();
     }
 
-    public Medico obterCadastro() {
+    public Medico obterCadastroMedico() {
         String nome = obterEntrada("Digite o nome do médico:");
         String cpf = obterEntrada("Digite o CPF do médico:");
         String especialidade = obterEntrada("Digite a especialidade do médico:");
@@ -31,14 +29,14 @@ public class ViewCadastro {
         return new Medico(nome, idade, especialidade, email, telefone, cpf, CRM);
     }
 
-        public Paciente obterCadastro() {
-            String nome = obterEntrada("Digite o nome do paciente:");
-            String cpf = obterEntrada("Digite o CPF do paciente:");
-            String endereco = obterEntrada ("Digite a endereco do paciente:");
-            String idade = obterEntrada ("Digite a idade do paciente:");
-            String email = obterEntrada ("Digite o e-mail do paciente:");
-            String telefone = obterEntrada ("Digite o telefone do paciente:");
-            String dataNascimento = obterEntrada ("Digite a data de nascimento do paciente:");
-            return new Paciente(nome, idade, telefone, cpf, endereco, email, dataNascimento);
+    public Paciente obterCadastroPaciente() {
+        String nome = obterEntrada("Digite o nome do paciente:");
+        String cpf = obterEntrada("Digite o CPF do paciente:");
+        String endereco = obterEntrada ("Digite a endereco do paciente:");
+        String idade = obterEntrada ("Digite a idade do paciente:");
+        String email = obterEntrada ("Digite o e-mail do paciente:");
+        String telefone = obterEntrada ("Digite o telefone do paciente:");
+        String dataNascimento = obterEntrada ("Digite a data de nascimento do paciente:");
+        return new Paciente(nome, idade, telefone, cpf, endereco, email, dataNascimento);
     }
 }

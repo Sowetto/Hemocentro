@@ -44,7 +44,7 @@ public class Pessoa {
     }
 
     public void setCpf(String cpf) {
-        this.cpf = cpf;
+        this.cpf = this.cpf;
     }
 
     public int getTelefone() {
