@@ -2,17 +2,15 @@ package Model;
 
 public class Pessoa {
     private String nome;
-    private int idade;
     private String email;
     private String cpf;
     private int telefone;
 
-    public Pessoa(String nome, int idade, String email, int telefone, String cpf) {
+    public Pessoa(String nome, String email, String cpf, int telefone) {
         this.nome = nome;
-        this.idade = idade;
         this.email = email;
-        this.telefone = telefone;
         this.cpf = cpf;
+        this.telefone = telefone;
     }
 
     public String getNome() {
@@ -21,14 +19,6 @@ public class Pessoa {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public int getIdade() {
-        return idade;
-    }
-
-    public void setIdade(int idade) {
-        this.idade = idade;
     }
 
     public String getEmail() {
@@ -44,7 +34,7 @@ public class Pessoa {
     }
 
     public void setCpf(String cpf) {
-        this.cpf = this.cpf;
+        this.cpf = cpf;
     }
 
     public int getTelefone() {
@@ -55,8 +45,3 @@ public class Pessoa {
         this.telefone = telefone;
     }
 }
-
-
-
-
-
