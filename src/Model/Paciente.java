@@ -1,17 +1,37 @@
 package Model;
 
-public class Paciente extends Pessoa {
+public class Paciente {
+    private String nome;
+    private String cpf;
     private String dataNascimento;
     private String endereco;
-    private String historico;
-    private String medicamento;
+    private String telefone;
+    private String email;
 
-    public Paciente(String nome, String email, String cpf, int telefone, String dataNascimento, String endereco, String historico, String medicamento) {
-        super(nome, email, cpf, telefone);
-        this.dataNascimento = dataNascimento;
+
+    public Paciente(String nome, String cpf, String endereco, String dataNascimento, String telefone, String email) {
+        this.nome = nome;
+        this.cpf = cpf;
         this.endereco = endereco;
-        this.historico = historico;
-        this.medicamento = medicamento;
+        this.dataNascimento = dataNascimento;
+        this.telefone = telefone;
+        this.email = email;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
     public String getDataNascimento() {
@@ -30,19 +50,19 @@ public class Paciente extends Pessoa {
         this.endereco = endereco;
     }
 
-    public String getHistorico() {
-        return historico;
+    public String getTelefone() {
+        return telefone;
     }
 
-    public void setHistorico(String historico) {
-        this.historico = historico;
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 
-    public String getMedicamento() {
-        return medicamento;
+    public String getEmail() {
+        return email;
     }
 
-    public void setMedicamento(String medicamento) {
-        this.medicamento = medicamento;
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
