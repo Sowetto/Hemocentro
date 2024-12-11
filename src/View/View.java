@@ -19,6 +19,10 @@ public class View {
         return scanner.nextInt();
     }
 
+    public void respostaIncorreta() {
+        System.out.println("Resposta Incorreta, selecione novamente!");
+    }
+
     public void cadastrarPaciente() {
         System.out.print("Nome do Paciente: ");
         String nome = scanner.nextLine();
@@ -33,6 +37,7 @@ public class View {
         String endereco = scanner.nextLine();
         System.out.print("Telefone do Paciente: ");
         String telefone = scanner.nextLine();
+        scanner.nextLine();
 
         Paciente paciente = new Paciente(nome, cpf, dataNascimento, email, endereco, telefone);
         PacienteController.adicionarPaciente(paciente);
