@@ -2,8 +2,8 @@ package Model;
 
 public class Medico {
     private String nome;
-    private String especialidade;
     private String crm;
+    private String especialidade;
     private String email;
     private String telefone;
 

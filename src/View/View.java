@@ -1,6 +1,9 @@
 package View;
 
 import java.util.Scanner;
+
+import Controller.MedicoController;
+import Controller.PacienteController;
 import Model.Medico;
 import Model.Paciente;
 
@@ -16,39 +19,40 @@ public class View {
         return scanner.nextInt();
     }
 
-    public Paciente cadastrarPaciente() {
+    public void cadastrarPaciente() {
         System.out.print("Nome do Paciente: ");
         String nome = scanner.nextLine();
-        System.out.print("Data de nascimento do Paciente: ");
-        String dataNascimento = scanner.nextLine();
         System.out.print("CPF do Paciente: ");
         String cpf = scanner.nextLine();
+        scanner.nextLine(); // Consumir nova linha
+        System.out.print("Data de nascimento do Paciente: ");
+        String dataNascimento = scanner.nextLine();
+        System.out.print("E-mail do Paciente: ");
+        String email = scanner.nextLine();
         System.out.print("Endereço do Paciente: ");
         String endereco = scanner.nextLine();
-        System.out.print("Histórico do Paciente: ");
-        String historico = scanner.nextLine();
-        System.out.print("Medicamento do Paciente: ");
-        String medicamento = scanner.nextLine();
         System.out.print("Telefone do Paciente: ");
-        int telefone = scanner.nextLine();
-        return new Paciente(nome, cpf, dataNascimento, endereco, historico, medicamento, telefone);
+        String telefone = scanner.nextLine();
+
+        Paciente paciente = new Paciente(nome, cpf, dataNascimento, email, endereco, telefone);
+        PacienteController.adicionarPaciente(paciente);
     }
 
-    public Medico cadastrarMedico() {
-        System.out.print("CRM do Médico: ");
-        int crm = scanner.nextInt();
-        scanner.nextLine(); // Consumir nova linha
+    public void cadastrarMedico() {
         System.out.print("Nome do Médico: ");
         String nome = scanner.nextLine();
+        System.out.print("CRM do Médico: ");
+        String crm = scanner.nextLine();
+        scanner.nextLine(); // Consumir nova linha
         System.out.print("Especialidade do Médico: ");
         String especialidade = scanner.nextLine();
-        System.out.print("CPF do Médico: ");
-        String cpf = scanner.nextLine();
-        System.out.print("Telefone do Médico: ");
-        int telefone = scanner.nextLine();
         System.out.print("E-mail do Médico: ");
         String email = scanner.nextLine();
-        return new Medico(crm, nome, especialidade, cpf, telefone, email);
+        System.out.print("Telefone do Médico: ");
+        String telefone = scanner.nextLine();
+
+        Medico medico = new Medico(nome, especialidade, crm, email, telefone);
+        MedicoController.adicionarMedico(medico);
     }
 
     public int selecionarPaciente() {

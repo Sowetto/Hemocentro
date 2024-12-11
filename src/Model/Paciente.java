@@ -4,18 +4,17 @@ public class Paciente {
     private String nome;
     private String cpf;
     private String dataNascimento;
+    private String email;
     private String endereco;
     private String telefone;
-    private String email;
 
-
-    public Paciente(String nome, String cpf, String endereco, String dataNascimento, String telefone, String email) {
+    public Paciente(String nome, String cpf, String dataNascimento, String email, String endereco, String telefone) {
         this.nome = nome;
         this.cpf = cpf;
-        this.endereco = endereco;
         this.dataNascimento = dataNascimento;
-        this.telefone = telefone;
         this.email = email;
+        this.endereco = endereco;
+        this.telefone = telefone;
     }
 
     public String getNome() {
@@ -50,19 +49,19 @@ public class Paciente {
         this.endereco = endereco;
     }
 
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
-
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 }
