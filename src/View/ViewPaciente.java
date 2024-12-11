@@ -11,7 +11,7 @@ public class ViewPaciente {
         if (retornaList().isEmpty()) {
             System.out.println("Nenhum paciente cadastrado.");
             return;
-        }else{
+        } else {
             System.out.println("Lista de Pacientes:");
             for ( Paciente paciente : retornaList()) {
                 System.out.println("Nome: " + paciente.getNome());

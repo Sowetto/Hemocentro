@@ -11,7 +11,7 @@ public class ViewMedico {
         if (retornaList().isEmpty()) {
             System.out.println("Nenhum médico cadastrado.");
             return;
-        }else{
+        } else {
         System.out.println("Lista de Médicos:");
         for (Medico medico : retornaList()) {
             System.out.println("Nome: " + medico.getNome());
